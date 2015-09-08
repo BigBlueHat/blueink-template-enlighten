@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>{{title}} - {{site.title}}</title>
+  <base href="http://{{site.host}}/blueink-template-enlighten/_design/blueink/_rewrite/" />
+  <link rel="stylesheet" type="text/css" href="_blueink/static/{{template}}/enlighten.css" />
+</head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+  <div id="logo-box">
+    <h1 id="logo"><a href="#" title="">{{site.title}}</a></h1>
+    <h2 id="slogan">&nbsp;</h2>
+  </div>
+  <div class="headerphoto"></div>
+</div>
+
+<div id="menu">
+  {{#sitemap}}
+    {{#body}}
+    <a class="item" href="{{url}}">
+      <strong>{{nav_label}}</strong>
+    </a>
+    {{/body}}
+    {{>nav}}
+    {{#body}}
+    {{/body}}
+  {{/sitemap}}
+</div>
+
+<!-- content-wrap starts here -->
+<div id="content-wrap">
+  <div id="content">
+
+    <!-- sidebar starts here -->
+    <div id="sidebar" >
+        <div id="subnav">
+          ...subnav...
+        </div>
+    </div>
+
+    <!-- main starts here -->
+    <article id="content">
+      {{#title}}
+        <h2>{{.}}</h2>
+      {{/title}}
+
+      {{#items.[0]}}
+      <section id="ddcol_0" data-blueink-area-index="0"
+        class="contentcol ddcol">
+        {{#area}}
+          <div class="item">
+          {{{item}}}
+          </div>
+
+          {{#collection}}
+          <article class="dditem container" data-blueink-collection>
+            <h3 class="ui dark red inverted block header">{{title}}</h3>
+            {{#with ../posts}}
+            <div class="ui five doubling cards">
+              {{#each this}}
+                {{{item}}}
+              {{/each}}
+            </div>
+            {{else}}
+            <div class="ui message">
+              <p>Sorry. There are no items in this collection.</p>
+            </div>
+            {{/with}}
+          </article>
+          {{/collection}}
+        {{/area}}
+      </section>
+      {{/items.[0]}}
+    </article>
+    <!-- main ends here -->
+
+    <!-- content-wrap ends here -->
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy; 2015 {{site.copyright}}
+| manufactured by <a class="bigbluehat" href="http://www.bigbluehat.com/"><strong>big<em>blue</em>hat</strong></a>
+| written in <a class="bigbluehat" href="http://www.blueinkcms.com/"><strong><em>blue</em>ink</strong></a>
+| template by <a href="http://www.styleshout.com/"><strong>styleshout</strong></a></p>
+</div>
+
+<!-- wrap ends here -->
+</div>
+
+<script src="_blueink/bundle.js"></script>
+</body>
+</html>

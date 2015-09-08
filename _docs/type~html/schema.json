@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "id": "#title",
+      "type": "string",
+      "additionalProperties": false
+    },
+    "content": {
+      "id": "#content",
+      "type": "string",
+      "additionalProperties": false
+    }
+  },
+  "required": []
+}

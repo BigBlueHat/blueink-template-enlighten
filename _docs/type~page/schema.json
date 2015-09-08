@@ -1,0 +1,25 @@
+{
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+       "title": {
+           "id": "#title",
+           "type": "string",
+           "additionalProperties": false
+       },
+       "nav_label": {
+           "id": "#nav_label",
+           "type": "string",
+           "title": "Navigation label",
+           "additionalProperties": false
+       },
+       "url": {
+          "id": "#url",
+          "type": "string",
+          "title": "URL",
+          "additionalProperties": false
+       }
+   },
+   "required": [
+   ]
+}

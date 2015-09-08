@@ -1,0 +1,11 @@
+<ul>
+  {{#sitemap}}
+  {{#body}}
+  <li><a href="{{url}}">{{nav_label}}</a>
+  {{/body}}
+    {{>nav}}
+  {{#body}}
+  </li>
+  {{/body}}
+  {{/sitemap}}
+</ul>

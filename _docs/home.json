@@ -1,0 +1,12 @@
+{
+  "_id": "home",
+  "title": "Home",
+  "nav_label": "Home",
+  "is_home": true,
+  "type": "page",
+  "page_items": [
+    [
+      {"_id": "8dd982de76e8b5959e10e6d43600709a"}
+    ]
+  ]
+}
