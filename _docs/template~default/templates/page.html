@@ -19,16 +19,15 @@
 </div>
 
 <div id="menu">
+  <ul class="navlist">
   {{#sitemap}}
     {{#body}}
-    <a class="item" href="{{url}}">
-      <strong>{{nav_label}}</strong>
-    </a>
-    {{/body}}
-    {{>nav}}
-    {{#body}}
+    <li>
+      <a class="toplevelmenuitem" href="{{url}}">{{nav_label}}</a>
+    </li>
     {{/body}}
   {{/sitemap}}
+  </ul>
 </div>
 
 <!-- content-wrap starts here -->
@@ -37,13 +36,17 @@
 
     <!-- sidebar starts here -->
     <div id="sidebar" >
-        <div id="subnav">
-          ...subnav...
-        </div>
+      <div id="subnav">
+        <ul class="navlist">
+        {{#sitemap}}
+          {{>nav}}
+        {{/sitemap}}
+        </ul>
+      </div>
     </div>
 
     <!-- main starts here -->
-    <article id="content">
+    <article>
       {{#title}}
         <h2>{{.}}</h2>
       {{/title}}
